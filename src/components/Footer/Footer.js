@@ -3,9 +3,7 @@ import React from "react";
 
 const Footer = () => {
     return (
-        <footer>
-            Footer
-        </footer>
+        <footer>Created by Pavel Kryvytskyi</footer>
     );
 }
 

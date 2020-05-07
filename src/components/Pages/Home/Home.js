@@ -1,11 +1,28 @@
 import React from "react";
+import { faFacebookSquare, faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import LinkIcon from "./LinkIcon/LinkIcon";
 
-
-const Home = (props) => {
+const Home = () => {
+    const iconsData = [
+        {name: faFacebookSquare, link: "/"},
+        {name: faLinkedin, link: "/"},
+        {name: faGithubSquare, link: "/"}
+    ];
     return (
-        <div>
-            Home
-        </div>
+        <main id="home">
+            <h1 className="lg-heading">
+                Hi,<br />I'm <span className="text-secondary">Pavel</span>
+            </h1>
+            <h2 className="sm-heading">Front End Developer / Software Engineer</h2>
+            <div className="icons">
+                {
+                    iconsData.map((li, i) => (
+                        <LinkIcon iconName={li.name} link={li.link} key={i}/>
+                    ))
+                }
+            </div>
+
+        </main>
     );
 }
 
