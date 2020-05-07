@@ -3,9 +3,9 @@ import React from "react";
 
 const Projects = (props) => {
     return (
-        <div>
+        <main id="projects">
             Projects
-        </div>
+        </main>
     );
 }
 

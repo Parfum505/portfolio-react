@@ -4,9 +4,9 @@ import LinkIcon from "./LinkIcon/LinkIcon";
 
 const Home = () => {
     const iconsData = [
-        {name: faFacebookSquare, link: "/"},
-        {name: faLinkedin, link: "/"},
-        {name: faGithubSquare, link: "/"}
+        {name: faFacebookSquare, link: "https://www.facebook.com/profile.php?id=100001563674935"},
+        {name: faLinkedin, link: "https://www.linkedin.com/in/pavel-kryvytskyi-370720124/"},
+        {name: faGithubSquare, link: "https://github.com/Parfum505?tab=repositories"}
     ];
     return (
         <main id="home">

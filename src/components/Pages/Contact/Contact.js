@@ -3,9 +3,9 @@ import React from "react";
 
 const Contact = (props) => {
     return (
-        <div>
+        <main id="contact">
             Contact
-        </div>
+        </main>
     );
 }
 
