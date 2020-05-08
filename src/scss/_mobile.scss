@@ -1,0 +1,50 @@
+@include mediaXl {
+
+}
+@include mediaLg {
+
+}
+@include mediaMd {
+  .menu-icon {
+    .portrait {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}
+
+@include mediaSm {
+  #home {
+    margin-top: 10vh;
+  }
+  .lg-heading {
+    font-size: 2rem;
+  }
+  .sm-heading {
+    font-size: 1.1rem;
+  }
+  .menu {
+    flex-direction: column;
+    &-icon, &-nav {
+      float: none;
+      width: 100%;
+      transform: translateY(0);
+    }
+    &-nav {
+      flex: 1;
+      transform: translateX(100%);
+      .nav-link {
+        font-size: 20px;
+        padding: 0.7rem 0;
+      }
+    }
+    &-icon {
+      padding: 2rem 0;
+      transform: translateX(-100%);
+      .portrait {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

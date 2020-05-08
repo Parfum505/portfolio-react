@@ -1,0 +1,44 @@
+#home {
+  overflow: hidden;
+  margin-top: 20vh;
+  .sm-heading {
+    @include easeOut();
+    opacity: 0;
+  }
+  .icons {
+    a {
+      display: inline-block;
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        transform: scale(1.1);
+        @include easeOut();
+      }
+    }
+  }
+  .loaded {
+    .letter {
+      -webkit-animation-name: bounceIn;
+      animation-name: bounceIn;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+    }
+  }
+  .letter {
+    display: inline-block;
+    opacity: 0;
+    &:hover {
+      cursor: pointer;
+      -webkit-animation-name: rubberBand;
+      animation-name: rubberBand;
+      -webkit-animation-duration: .75s;
+      animation-duration: .75s;
+    }
+  }
+}
+
+@for $i from 1 through 23 {
+  .loaded .letter:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
