@@ -2,8 +2,11 @@
   overflow: hidden;
   margin-top: 20vh;
   .sm-heading {
-    @include easeOut();
-    opacity: 0;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    -webkit-transform-origin: center top;
+    -ms-transform-origin: center top;
+    transform-origin: center top;
   }
   .icons {
     a {
@@ -16,29 +19,18 @@
       }
     }
   }
+  .letter {
+    opacity: 0;
+  }
   .loaded {
     .letter {
-      -webkit-animation-name: bounceIn;
-      animation-name: bounceIn;
-      -webkit-animation-duration: 1s;
-      animation-duration: 1s;
+      opacity: 1;
     }
-  }
-  .letter {
-    display: inline-block;
-    opacity: 0;
-    &:hover {
-      cursor: pointer;
-      -webkit-animation-name: rubberBand;
-      animation-name: rubberBand;
-      -webkit-animation-duration: .75s;
-      animation-duration: .75s;
+    &.active {
+      .letter {
+        @extend .bounceIn;
+        @extend .animated;
+      }
     }
-  }
-}
-
-@for $i from 1 through 23 {
-  .loaded .letter:nth-child(#{$i}) {
-    animation-delay: $i * 0.1s;
   }
 }

@@ -24,13 +24,16 @@ h1, h2, h3 {
   margin: 0;
   font-weight: 400;
 }
+.inline-block {
+  display: inline-block;
+}
 .lg-heading {
   font-size: 3rem;
   font-weight: bold;
 }
 .sm-heading {
   display: inline-block;
-  margin-bottom: 2rem;
+  margin:  0.5rem 0 2rem;
   padding: 0.2rem 1rem;
   background: rgba(lighten($primary-color, 2), 0.5);
 }
@@ -49,6 +52,15 @@ header {
 main {
   flex: 1;
   padding: 3rem;
+  .letter {
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
+      @extend .rubberBand;
+      @extend .animated;
+      animation-delay: 0s;
+    }
+  }
 }
 footer {
   padding: 0.7rem;
@@ -159,7 +171,48 @@ footer {
 .bounceIn {
   -webkit-animation-name: bounceIn;
   animation-name: bounceIn;
-  -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+}
+
+@keyframes dropIn {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+.dropIn {
+  -webkit-animation-name: dropIn;
+  animation-name: dropIn;
+}
+
+@for $i from 1 through 21 {
+  .animation-delay#{$i} {
+    animation-delay: $i * 0.1s;
+  }
 }
 
