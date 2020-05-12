@@ -4,8 +4,8 @@ $show-home-image: true;
 $home-image: url(../assets/img/bg_home.jpg);
 $background-opacity: 0.6;
 
-@mixin easeOut {
-  transition: all 0.3s ease-out;
+@mixin easeOut($time: 0.3s) {
+  transition: all $time ease-out;
 }
 @mixin background {
   @if $show-home-image {
@@ -26,23 +26,75 @@ $background-opacity: 0.6;
     }
   }
 }
+@mixin stylingCube($cube-edge) {
+  .cube {
+    height: $cube-edge;
+    width: $cube-edge;
+    margin: .5*$cube-edge auto $cube-edge;
+    &_face {
+      &:nth-child(1) {
+        transform: rotateY(0) translate3d($cube-edge, 0, 0)
+      }
+      &:nth-child(2) {
+        transform: rotateY(0) translate3d(-$cube-edge, 0, 0)
+      }
+      &:nth-child(3) {
+        transform: rotateY(0) translate3d(0, 0, 0)
+      }
+      &:nth-child(4) {
+        transform: rotateY(0) translate3d(-$cube-edge, $cube-edge, 0)
+      }
+      &:nth-child(5) {
+        transform: rotateX(0) translate3d(0, $cube-edge, 0)
+      }
+      &:nth-child(6) {
+        transform: rotateX(0) translate3d($cube-edge, $cube-edge, 0)
+      }
+    }
+    &.active {
+      .cube_face {
+        @for $i from 0 to 6 {
+          &:nth-child(#{$i + 1}) {
+            @if $i == 4 {
+              transform: rotateX( 90deg) translate3d(0, 0, .5*$cube-edge)
+            } @else if $i == 5 {
+              transform: rotateX( -90deg) translate3d(0, 0, .5*$cube-edge)
+            } @else {
+              transform: rotateY( #{$i * 90}deg) translate3d(0, 0, .5*$cube-edge)
+            }
+          }
+        }
+      }
+      &:hover {
+        .cube_face {
+          @for $i from 0 to 6 {
+            &:nth-child(#{$i + 1}) {
+              @if $i == 4 {
+                transform: rotateX( 90deg) translate3d(0, 0, $cube-edge)
+              } @else if $i == 5 {
+                transform: rotateX( -90deg) translate3d(0, 0, $cube-edge)
+              } @else {
+                transform: rotateY( #{$i * 90}deg) translate3d(0, 0, $cube-edge)
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (min-width: 500px) {
     @content;
   }
 }
 @mixin mediaMd {
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
-    @content;
-  }
-}
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 992px) {
     @content;
   }
 }

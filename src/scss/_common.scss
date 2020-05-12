@@ -28,13 +28,14 @@ h1, h2, h3 {
   display: inline-block;
 }
 .lg-heading {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .sm-heading {
   display: inline-block;
   margin:  0.5rem 0 2rem;
   padding: 0.2rem 1rem;
+  font-size: 1.1rem;
   background: rgba(lighten($primary-color, 2), 0.5);
 }
 a {
@@ -51,7 +52,7 @@ header {
 }
 main {
   flex: 1;
-  padding: 3rem;
+  padding: 2rem;
   .letter {
     display: inline-block;
     &:hover {
@@ -209,7 +210,17 @@ footer {
   -webkit-animation-name: dropIn;
   animation-name: dropIn;
 }
-
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+.rotate {
+  animation: rotate 20s infinite linear;
+}
 @for $i from 1 through 21 {
   .animation-delay#{$i} {
     animation-delay: $i * 0.1s;

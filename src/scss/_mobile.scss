@@ -1,50 +1,71 @@
-@include mediaXl {
-
-}
-@include mediaLg {
-
-}
-@include mediaMd {
-  .menu-icon {
-    .portrait {
-      width: 200px;
-      height: 200px;
-    }
-  }
-}
-
 @include mediaSm {
+  main {
+    padding: 3rem;
+  }
   #home {
-    margin-top: 10vh;
+    margin-top: 20vh;
   }
   .lg-heading {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .sm-heading {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   .menu {
-    flex-direction: column;
+    flex-flow: row nowrap;
     &-icon, &-nav {
-      float: none;
-      width: 100%;
-      transform: translateY(0);
+      float: left;
+      width: 50%;
     }
     &-nav {
-      flex: 1;
-      transform: translateX(100%);
+      transform: translate3d(0,-100%,0);
       .nav-link {
-        font-size: 20px;
-        padding: 0.7rem 0;
+        font-size: 25px;
+        padding: 1rem 0;
       }
     }
     &-icon {
-      padding: 2rem 0;
-      transform: translateX(-100%);
+      transform: translate3d(0,100%,0);
       .portrait {
-        width: 100px;
-        height: 100px;
+        width: 200px;
+        height: 200px;
       }
+    }
+  }
+  #about {
+    @include stylingCube(8rem);
+  }
+
+}
+
+@include mediaMd {
+  .menu-icon {
+    .portrait {
+      width: 250px;
+      height: 250px;
+    }
+  }
+  #about {
+    .about-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cube-container,
+    .about-info-text {
+      width: 50%;
+    }
+    @include stylingCube(8rem);
+    .cube {
+      margin: auto;
+    }
+  }
+}
+@include mediaLg {
+  #about {
+    @include stylingCube(10rem);
+    .cube {
+      margin: auto;
     }
   }
 }

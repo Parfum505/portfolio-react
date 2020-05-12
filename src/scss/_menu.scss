@@ -40,24 +40,26 @@
   clear: both;
   background: rgba($primary-color, 0.8);
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
   align-items: stretch;
 
   &-icon, &-nav {
+    width: 100%;
+    transform: translateY(0);
     display: flex;
-    flex-flow: column wrap;
-    width: 50%;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    float: left;
     overflow: hidden;
     @include easeOut();
   }
   &-icon {
-    transform: translateY(100%);
+    padding: 2rem 0;
+    transform: translateX(-100%);
+
     .portrait {
-      width: 250px;
-      height: 250px;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 3px solid $secondary-color;
       background: url(../assets/img/portrait.jpg) center;
@@ -69,16 +71,17 @@
     padding: 0;
     list-style: none;
     background: rgba(darken($primary-color, 5), 0.7);
-    transform: translateY(-100%);
+    flex: 1;
+    transform: translateX(100%);
     .nav-item {
       transform: translateX(600px);
       @include easeOut();
     }
     .nav-link {
       display: inline-block;
-      font-size: 25px;
+      font-size: 20px;
+      padding: 0.7rem 0;
       text-transform: uppercase;
-      padding: 1rem 0;
       @include easeOut();
       &.active {
         color: $secondary-color;
