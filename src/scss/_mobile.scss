@@ -55,17 +55,34 @@
     .about-info-text {
       width: 50%;
     }
-    @include stylingCube(8rem);
     .cube {
       margin: auto;
     }
   }
+  #projects {
+    .filter {
+      max-width: 80%;
+    }
+    .filter-btn {
+      width: auto;
+      margin: 0.5rem;
+      flex: 1;
+    }
+  }
 }
 @include mediaLg {
+  #home {
+    margin-left: 10%;
+  }
   #about {
-    @include stylingCube(10rem);
+    @include stylingCube(11rem);
     .cube {
       margin: auto;
+    }
+  }
+  #projects {
+    .filter {
+      max-width: 60%;
     }
   }
 }
