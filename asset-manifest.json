@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio-react/static/css/main.6baed3d8.chunk.css",
-    "main.js": "/portfolio-react/static/js/main.d1ace1f1.chunk.js",
-    "main.js.map": "/portfolio-react/static/js/main.d1ace1f1.chunk.js.map",
+    "main.css": "/portfolio-react/static/css/main.dc9ebcd3.chunk.css",
+    "main.js": "/portfolio-react/static/js/main.0f48e3e4.chunk.js",
+    "main.js.map": "/portfolio-react/static/js/main.0f48e3e4.chunk.js.map",
     "runtime-main.js": "/portfolio-react/static/js/runtime-main.907c719b.js",
     "runtime-main.js.map": "/portfolio-react/static/js/runtime-main.907c719b.js.map",
-    "static/js/2.9b0d2a01.chunk.js": "/portfolio-react/static/js/2.9b0d2a01.chunk.js",
-    "static/js/2.9b0d2a01.chunk.js.map": "/portfolio-react/static/js/2.9b0d2a01.chunk.js.map",
+    "static/js/2.6fa9abab.chunk.js": "/portfolio-react/static/js/2.6fa9abab.chunk.js",
+    "static/js/2.6fa9abab.chunk.js.map": "/portfolio-react/static/js/2.6fa9abab.chunk.js.map",
     "index.html": "/portfolio-react/index.html",
-    "precache-manifest.471c1234ac393be3dce4258c646207c8.js": "/portfolio-react/precache-manifest.471c1234ac393be3dce4258c646207c8.js",
+    "precache-manifest.25c6220dd166971fa50a9d28346768d7.js": "/portfolio-react/precache-manifest.25c6220dd166971fa50a9d28346768d7.js",
     "service-worker.js": "/portfolio-react/service-worker.js",
-    "static/css/main.6baed3d8.chunk.css.map": "/portfolio-react/static/css/main.6baed3d8.chunk.css.map",
-    "static/js/2.9b0d2a01.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.9b0d2a01.chunk.js.LICENSE.txt",
-    "static/media/Portfolio.scss": "/portfolio-react/static/media/portrait.a33a4105.jpg",
+    "static/css/main.dc9ebcd3.chunk.css.map": "/portfolio-react/static/css/main.dc9ebcd3.chunk.css.map",
+    "static/js/2.6fa9abab.chunk.js.LICENSE.txt": "/portfolio-react/static/js/2.6fa9abab.chunk.js.LICENSE.txt",
+    "static/media/Portfolio.scss": "/portfolio-react/static/media/weatherAngular.37d375c3.jpg",
     "static/media/cv_kryvytskyi_frontend_dev.pdf": "/portfolio-react/static/media/cv_kryvytskyi_frontend_dev.ab3030e2.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.907c719b.js",
-    "static/js/2.9b0d2a01.chunk.js",
-    "static/css/main.6baed3d8.chunk.css",
-    "static/js/main.d1ace1f1.chunk.js"
+    "static/js/2.6fa9abab.chunk.js",
+    "static/css/main.dc9ebcd3.chunk.css",
+    "static/js/main.0f48e3e4.chunk.js"
   ]
 }
