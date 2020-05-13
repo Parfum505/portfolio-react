@@ -1,0 +1,41 @@
+#contact {
+  .contact-boxes {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .contact-box {
+    border: 3px solid #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      color: $secondary-color;
+      &:hover {
+        @extend .rubberBand;
+        @extend .animated;
+      }
+      span {
+        display: inline-block;
+        margin-left: 1rem;
+        color: #fff;
+      }
+    }
+    &.social {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: space-between;
+      a:nth-child(2) {
+        margin: 0 1rem;
+      }
+    }
+  }
+}

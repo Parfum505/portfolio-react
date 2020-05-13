@@ -69,6 +69,16 @@
       flex: 1;
     }
   }
+  #contact {
+    .contact-box {
+      a {
+        font-size: 1.5rem;
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }
 @include mediaLg {
   #home {
@@ -83,6 +93,22 @@
   #projects {
     .filter {
       max-width: 60%;
+    }
+  }
+  #contact {
+    margin-left: 10%;
+    .contact-boxes {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      width: 600px;
+    }
+    .contact-box {
+      &:nth-child(1) {
+        align-self: flex-end;
+      }
+      &:nth-child(2) {
+        margin-left: 15%;
+      }
     }
   }
 }

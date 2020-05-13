@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {splitToSpan} from "../../../helpers/helpers";
-import LinkIcon from "../Home/LinkIcon/LinkIcon";
+import LinkIcon from "../Home/LinkIcons/LinkIcon/LinkIcon";
 import Filter from "./Filter/Filter";
 import {faGithub} from '@fortawesome/free-brands-svg-icons';
 import {faEye} from "@fortawesome/free-solid-svg-icons";
@@ -24,11 +24,10 @@ const Projects = () => {
             <Filter clicked={filterHandle} categories={categories} activFilter={filter}/>
             <div className="projects-container">
                 <div className="project">
-                    <a href="">
-                        <img src="" alt=""/>
-                    </a>
-                    <LinkIcon iconName={faEye} link="#" size="1x">Live Demo</LinkIcon>
-                    <LinkIcon iconName={faGithub} link="#" size="1x">GitHub</LinkIcon>
+                    <div className="btn-container">
+                        <LinkIcon iconName={faEye} link="#" size="1x"><span>Live Demo</span></LinkIcon>
+                        <LinkIcon iconName={faGithub} link="#" size="1x"><span>GitHub</span></LinkIcon>
+                    </div>
                 </div>
             </div>
         </main>
