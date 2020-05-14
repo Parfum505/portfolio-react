@@ -2,7 +2,7 @@ import React from "react";
 import {splitToSpan} from "../../../helpers/helpers";
 import LinkIcons from "../Home/LinkIcons/LinkIcons";
 import LinkIcon from "../Home/LinkIcons/LinkIcon/LinkIcon";
-import {faEnvelopeSquare, faPhoneSquare, faPhoneSquareAlt} from "@fortawesome/free-solid-svg-icons";
+import {faEnvelopeSquare, faPhoneSquare} from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
     return (

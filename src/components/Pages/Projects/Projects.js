@@ -1,19 +1,27 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {splitToSpan} from "../../../helpers/helpers";
-import LinkIcon from "../Home/LinkIcons/LinkIcon/LinkIcon";
-import Filter from "./Filter/Filter";
-import {faGithub} from '@fortawesome/free-brands-svg-icons';
-import {faEye} from "@fortawesome/free-solid-svg-icons";
+import Filter from "./Filter/Filter"
+import Project from "./Project/Project";
+import {categories, projects} from "../../../data/data";
 
 const Projects = () => {
     const [filter, setFilter] = useState('All');
-    const categories = [
-        'All', 'Javascript', 'React','PHP', 'Angular', 'Other'
-    ];
-    const projects = [];
+    const [projectsList, setProjectsList] = useState([]);
+
+    useEffect(() => {
+        setFilter('All');
+    }, []);
+
+    useEffect(() => {
+        filterProjects(filter);
+    }, [filter]);
+
     function filterHandle(category) {
         setFilter(category);
-        console.log(category);
+    }
+    function filterProjects(category) {
+        const newProjectsList = projects.filter(project => project.category.indexOf(category) > -1);
+        setProjectsList([...newProjectsList]);
     }
     return (
         <main id="projects">
@@ -23,12 +31,16 @@ const Projects = () => {
             <h2 className="sm-heading">Some of my recent works...</h2>
             <Filter clicked={filterHandle} categories={categories} activFilter={filter}/>
             <div className="projects-container">
-                <div className="project">
-                    <div className="btn-container">
-                        <LinkIcon iconName={faEye} link="#" size="1x"><span>Live Demo</span></LinkIcon>
-                        <LinkIcon iconName={faGithub} link="#" size="1x"><span>GitHub</span></LinkIcon>
-                    </div>
-                </div>
+                {
+                    projectsList.map((project, i) => (
+                        <Project key={i}
+                                 srcGithub={project.srcGithub}
+                                 srcDemo={project.srcDemo}
+                                 tags={project.tags}
+                                 img={project.img}/>
+                        )
+                    )
+                }
             </div>
         </main>
     );
