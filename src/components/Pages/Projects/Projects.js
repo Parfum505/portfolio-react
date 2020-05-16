@@ -3,6 +3,7 @@ import {splitToSpan} from "../../../helpers/helpers";
 import Filter from "./Filter/Filter"
 import Project from "./Project/Project";
 import {categories, projects} from "../../../data/data";
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const Projects = () => {
     const [filter, setFilter] = useState('All');
@@ -30,18 +31,22 @@ const Projects = () => {
             </h1>
             <h2 className="sm-heading">Some of my recent works...</h2>
             <Filter clicked={filterHandle} categories={categories} activFilter={filter}/>
-            <div className="projects-container">
+            <TransitionGroup className="projects-container">
                 {
                     projectsList.map((project, i) => (
-                        <Project key={i}
-                                 srcGithub={project.srcGithub}
+                        <CSSTransition
+                            key={project.img}
+                            timeout={500}
+                            classNames="item">
+                            <Project srcGithub={project.srcGithub}
                                  srcDemo={project.srcDemo}
                                  tags={project.tags}
                                  img={project.img}/>
+                        </CSSTransition>
                         )
                     )
                 }
-            </div>
+            </TransitionGroup>
         </main>
     );
 }

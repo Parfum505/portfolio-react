@@ -91,7 +91,7 @@ export const projects = [
         category: ['All', 'PHP'],
         tags: ['PHP', 'MySQL', 'Javascript', 'SASS' ],
         srcDemo: '',
-        srcGithub: urlGithub + 'PHP/tree/master/ToDoList',
+        srcGithub: urlGithub + 'PHP/tree/master/BookShop',
         img: urlProjectsImg + 'bookshop.jpg'
     },
     {
