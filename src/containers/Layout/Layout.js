@@ -3,11 +3,11 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
 const Layout = (props) => (
-        <>
-            <Header/>
-            {props.children}
-            <Footer />
-        </>
-    );
+  <>
+    <Header />
+    {props.children}
+    <Footer />
+  </>
+);
 
-export default Layout;
+export default  Layout;
