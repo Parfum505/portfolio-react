@@ -10,10 +10,10 @@ const AnimatedSwitch = ({ location }) => (
   <TransitionGroup component={null}>
     <CSSTransition key={location.key} timeout={300} classNames={"fade"}>
       <Switch>
-        <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/projects" component={Projects} />
+        <Route path="/" component={Home} />
       </Switch>
     </CSSTransition>
   </TransitionGroup>
