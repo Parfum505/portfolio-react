@@ -10,7 +10,7 @@ const Projects = () => {
   const [projectsList, setProjectsList] = useState([]);
 
   useEffect(() => {
-    setFilter("Javascript");
+    setFilter("React");
   }, []);
 
   useEffect(() => {

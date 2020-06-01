@@ -1,15 +1,28 @@
+export const linksData = [
+  {name: "Home", link: "/"},
+  {name: "About me", link: "/about"},
+  {name: "My Projects", link: "/projects"},
+  {name: "Contact Me", link: "/contact"}
+];
 export const categories = [
-  "Javascript",
   "React",
+  "Javascript",
   "PHP",
   "Angular",
   "Other",
   "All",
 ];
-export const urlDemo = "https://parfum505.github.io/";
-export const urlGithub = "https://github.com/Parfum505/";
-export const urlProjectsImg = "images/projects/";
+const urlDemo = "https://parfum505.github.io/";
+const urlGithub = "https://github.com/Parfum505/";
+const urlProjectsImg = "images/projects/";
 export const projects = [
+  {
+    category: ["All", "React"],
+    tags: ["React", "Redux", "ES6", "Firebase"],
+    srcDemo: urlDemo + "burger-order-react/",
+    srcGithub: urlGithub + "burger-order-react",
+    img: urlProjectsImg + "burger_order.png",
+  },
   {
     category: ["All", "React"],
     tags: ["React", "Bootstrap", "ES6", "GoggleBooks API"],
