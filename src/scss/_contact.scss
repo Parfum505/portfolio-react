@@ -33,8 +33,11 @@
       flex-wrap: nowrap;
       align-items: center;
       justify-content: space-between;
-      a:nth-child(2) {
-        margin: 0 1rem;
+      a {
+        margin: 0 1rem 0 0;
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }

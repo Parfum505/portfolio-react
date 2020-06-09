@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { splitToSpan } from "../../../helpers/helpers";
 import { Link } from "react-router-dom";
-import cv from "./../../../assets/cv_kryvytskyi_frontend_dev.pdf";
+import cv from "./../../../assets/pavel_kryvytskyi_resume_frontend_dev.pdf";
 import Cube from "./Cube/Cube";
 
 const About = () => {
