@@ -1,8 +1,8 @@
 export const linksData = [
-  {name: "Home", link: "/"},
-  {name: "About me", link: "/about"},
-  {name: "My Projects", link: "/projects"},
-  {name: "Contact Me", link: "/contact"}
+  { name: "Home", link: "/" },
+  { name: "About me", link: "/about" },
+  { name: "My Projects", link: "/projects" },
+  { name: "Contact Me", link: "/contact" },
 ];
 export const categories = [
   "React",
@@ -16,6 +16,13 @@ const urlDemo = "https://parfum505.github.io/";
 const urlGithub = "https://github.com/Parfum505/";
 const urlProjectsImg = "images/projects/";
 export const projects = [
+  {
+    category: ["All", "React"],
+    tags: ["React", "Redux", "ES6", "Firebase-auth", "styled-components"],
+    srcDemo: urlDemo + "e-commerce-react/",
+    srcGithub: urlGithub + "e-commerce-react",
+    img: urlProjectsImg + "e_commerce.jpg",
+  },
   {
     category: ["All", "React"],
     tags: ["React", "Redux", "ES6", "Firebase"],
