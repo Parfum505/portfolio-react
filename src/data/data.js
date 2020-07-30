@@ -18,14 +18,21 @@ const urlProjectsImg = "images/projects/";
 export const projects = [
   {
     category: ["All", "React"],
-    tags: ["React", "Redux", "ES6", "Firebase-auth", "styled-components"],
+    tags: [
+      "React",
+      "Redux",
+      "Redux-thunk",
+      "ES6",
+      "Firebase-auth",
+      "styled-components",
+    ],
     srcDemo: urlDemo + "e-commerce-react/",
     srcGithub: urlGithub + "e-commerce-react",
     img: urlProjectsImg + "e_commerce.jpg",
   },
   {
     category: ["All", "React"],
-    tags: ["React", "Redux", "ES6", "Firebase"],
+    tags: ["React", "Redux", "Redux-thunk", "ES6", "Firebase"],
     srcDemo: urlDemo + "burger-order-react/",
     srcGithub: urlGithub + "burger-order-react",
     img: urlProjectsImg + "burger_order.png",
@@ -36,6 +43,21 @@ export const projects = [
     srcDemo: urlDemo + "bookSearcherReact/",
     srcGithub: urlGithub + "bookSearcherReact",
     img: urlProjectsImg + "book_searcher.jpg",
+  },
+  {
+    category: ["All", "React"],
+    tags: [
+      "React",
+      "Typescript",
+      "Redux",
+      "Redux-thunk",
+      "styled-components",
+      "ES6",
+      "Pokemon API",
+    ],
+    srcDemo: urlDemo + "pockemon-react-typescript/",
+    srcGithub: urlGithub + "pockemon-react-typescript",
+    img: urlProjectsImg + "pokemons.jpg",
   },
   {
     category: ["All", "React"],
